@@ -2,7 +2,7 @@
 
 ### Description
 
-**NOTE**: This is the *exact* same repo as this project: [REST-API-IMS-using-Sequelize](https://github.com/jim3/REST-API-IMS-using-Sequelize). The only difference is that this repo uses the ECMAScript "ESM" module system. I wanted to experiment and see the differences and also decide if new projects should get the ESM treatment or not. I'll probably end up deleting this repo in the future but leaving as reference for now...
+**NOTE**: This is the *exact* same repo as this project: [REST-API-IMS-using-Sequelize](https://github.com/jim3/REST-API-IMS-using-Sequelize). The only difference is that this repo uses the ECMAScript "ESM" module system. I wanted to experiment and see the differences and also decide if new projects should get the ESM treatment or not. I'll probably end up deleting this repo (or the other) in the future but leaving as reference for now...
 
 A RESTful API for an inventory management application for parts (fasteners). Express.js handles the routing and server-side logic. Sequelize ORM is used to interact with a SQLite3 database. 
 The focus of the project is to learn more about how to build RESTful API's. There is a front-end to simply demonstrate how the API works. Things I plan to implement in 
