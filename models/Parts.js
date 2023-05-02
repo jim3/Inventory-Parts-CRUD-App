@@ -21,4 +21,4 @@ const Parts = sequelize.define("Parts", {
 });
 
 const db = { Parts, sequelize, Sequelize };
-export default db; // module.exports = db;
+export default db;

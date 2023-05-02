@@ -34,16 +34,19 @@ const createPart = async (req, res) => {
         const { partname, quantity, price, ...product } = req.body;
         const productType = Object.keys(product)[0];
         const productValue = product[productType];
+
         const responseObj = {
             partName: partname,
             partType: productValue,
             quantity,
             price,
         };
+
         // combines the `build` and `save` methods
         await db.Parts.create(responseObj);
+
         res.render("index", {
-            ...responseObj,
+            ...responseObj, // spread operator
         });
     } catch (err) {
         console.error();

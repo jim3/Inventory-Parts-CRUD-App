@@ -26,7 +26,6 @@ Accounts.beforeCreate(async (account, options) => {
     account.password = hashedPassword;
 });
 
-// Export the model and sequelize connection
 const accountsDB = { Accounts, sequelize, Sequelize };
 
 export default accountsDB;
