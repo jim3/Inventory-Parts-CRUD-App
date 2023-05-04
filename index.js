@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// set view engine to ejs
+// set view engine to ejsK
 app.set("view engine", "ejs");
 app.set("views", path.resolve(path.dirname("file"), "views"));
 app.use(express.static(path.resolve(path.dirname("file"), "public")));
