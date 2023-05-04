@@ -86,7 +86,7 @@ const login = async (req, res) => {
         if (passwd) {
             // takes email value from `req` & provides a token as the `res` to client
             const token = jwtTokenGenerator(account.email);
-
+            
             // add token to header response and send to client
             res.header("Authorization", `Bearer ${token}`).send({ message: "Success" });
         } else {
