@@ -72,4 +72,3 @@ partname.addEventListener("change", function () {
         alert("You need to select a part type!");
     }
 });
-

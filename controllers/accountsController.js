@@ -30,7 +30,7 @@ const createAccount = async (req, res) => {
 
         // If validation fails, return 400
         if (error) {
-            console.log(error.details[0].message);
+            console.log(error.details[0].message); // log the error
             return res.status(400).send(error.details[0].message);
         }
 
@@ -64,9 +64,8 @@ const login = async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        if (!email || !password) {
-            return res.status(400).send("Missing fields");
-        }
+        // check if email and password are provided
+        if (!email || !password) return res.status(400).send("Missing fields");
 
         // Check if account exists
         const account = await accountsDB.Accounts.findOne({
@@ -77,9 +76,8 @@ const login = async (req, res) => {
             },
         });
 
-        if (!account) {
-            return res.status(404).send("Account not found");
-        }
+        // if account does not exist, return 404
+        if (!account) return res.status(404).send("Account not found");
 
         // verify password
         const passwd = await bcrypt.compare(password, account.password);
