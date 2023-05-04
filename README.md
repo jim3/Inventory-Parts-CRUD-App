@@ -2,12 +2,9 @@
 
 ### Description
 
-**NOTE**: This is the *exact* same repo as this project: [REST-API-IMS-using-Sequelize](https://github.com/jim3/REST-API-IMS-using-Sequelize). The only difference is that this repo uses the ECMAScript "ESM" module system. I wanted to experiment and see the differences and also decide if new projects should get the ESM treatment or not. I'll probably end up deleting this repo (or the other) in the future but leaving as reference for now...
-
-A RESTful API for an inventory management application for parts (fasteners). Express.js handles the routing and server-side logic. Sequelize ORM is used to interact with a SQLite3 database. 
-The focus of the project is to learn more about how to build RESTful API's. There is a front-end to simply demonstrate how the API works. Things I plan to implement in 
+A RESTful API for an inventory management application for parts (fasteners). Express.js handles the routing and server-side logic. Sequelize ORM is used to interact with a SQLite3 database.
+The focus of the project is to learn more about how to build RESTful API's. There is a front-end to simply demonstrate how the API works. Things I plan to implement in
 the future are listed at the bottom of the README.
-
 
 ### Features
 
@@ -68,30 +65,25 @@ the future are listed at the bottom of the README.
 
 ```json
 [
-  {
-    "id": 1,
-    "partName": "nuts",
-    "partType": "hex",
-    "quantity": 5,
-    "price": 0.09,
-    "createdAt": "2023-04-15T11:04:14.575Z",
-    "updatedAt": "2023-04-15T11:04:14.575Z"
-  },
-  {
-    "id": 2,
-    "partName": "washers",
-    "partType": "lock",
-    "quantity": 125,
-    "price": 0.13,
-    "createdAt": "2023-04-15T12:50:02.098Z",
-    "updatedAt": "2023-04-15T12:50:02.098Z"
-  }
+    {
+        "id": 1,
+        "partName": "nuts",
+        "partType": "hex",
+        "quantity": 5,
+        "price": 0.09,
+        "createdAt": "2023-04-15T11:04:14.575Z",
+        "updatedAt": "2023-04-15T11:04:14.575Z"
+    },
+    {
+        "id": 2,
+        "partName": "washers",
+        "partType": "lock",
+        "quantity": 125,
+        "price": 0.13,
+        "createdAt": "2023-04-15T12:50:02.098Z",
+        "updatedAt": "2023-04-15T12:50:02.098Z"
+    }
 ]
 ```
 
 ---
-
-#### Things planned to implement in the future (in no particular order)
--   Add a front-end for the accounts table for Login/Logout functionality with authentication.
--   Search for parts by part type, part name, quantity and price
--   Sort parts by part type, part name, quantity and price
