@@ -81,7 +81,7 @@ const updatePart = async (req, res) => {
 
 // =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= //
 
-const deletePart = async (req, res) => {x1
+const deletePart = async (req, res) => {
     try {
         // destructure req.body object
         const { partname, quantity, price, ...product } = req.body;

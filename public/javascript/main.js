@@ -1,8 +1,11 @@
+// grab the input elements
 var partname = document.getElementById("partname");
 var screwtype = document.getElementById("screwtype");
 var nuttype = document.getElementById("nuttype");
 var bolttype = document.getElementById("bolttype");
 var washertype = document.getElementById("washertype");
+
+// grab the form element
 var form = document.getElementById("myform");
 
 form.addEventListener("submit", function (event) {

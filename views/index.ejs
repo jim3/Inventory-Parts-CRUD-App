@@ -7,15 +7,15 @@
     <body>
         <div class="container">
             <h1 style="text-align: center">Fastener Inventory</h1>
-            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="./login">Login</a></li>
                 </ul>
             </nav>
-            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
             <h2>Order Form</h2>
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
             <form id="myform" action="/api/parts" method="POST">
                 <fieldset id="partname">
                     <legend>Category</legend>
@@ -87,7 +87,7 @@
                 </fieldset>
                 <input type="submit" value="Submit" />
             </form>
-
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
             <% if (typeof partName !=="undefined" ) { %>
             <h2>Order Results:</h2>
             <p>Part Name: <%= partName %></p>
@@ -96,7 +96,6 @@
             <p>Price: <%= price %></p>
             <% } %>
         </div>
-
         <script src="../javascript/main.js"></script>
     </body>
 </html>

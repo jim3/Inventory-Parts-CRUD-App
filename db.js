@@ -1,4 +1,4 @@
-import { Sequelize } from "sequelize"; 
+import { Sequelize } from "sequelize";
 
 // create the database connection
 const sequelize = new Sequelize({
@@ -20,6 +20,5 @@ const testConnection = async () => {
     }
 };
 testConnection();
-
 
 export default sequelize;
