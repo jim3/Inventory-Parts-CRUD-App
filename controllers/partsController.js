@@ -31,13 +31,20 @@ const getPart = async (req, res) => {
 const createPart = async (req, res) => {
     try {
         // destructure req.body object
-        const { partname, quantity, price, ...product } = req.body;
+        // const { partname, quantity, price, ...product } = req.body;
+        const { partType, quantity, price, ...product } = req.body;
         const productType = Object.keys(product)[0];
         const productValue = product[productType];
 
+        // const responseObj = {
+        //     partName: partname,
+        //     partType: productValue,
+        //     quantity,
+        //     price,
+        // };
         const responseObj = {
-            partName: partname,
-            partType: productValue,
+            partName: productValue,
+            partType,
             quantity,
             price,
         };
@@ -45,11 +52,10 @@ const createPart = async (req, res) => {
         // combines the `build` and `save` methods
         await db.Parts.create(responseObj);
 
-        res.render("index", {
-            ...responseObj, // spread operator
-        });
+        res.json(responseObj);
     } catch (err) {
-        console.error();
+        console.error("Error: ", err.message || "Server Error");
+        // console.error();
         res.status(500).send("Internal Server Error");
     }
 };
@@ -72,6 +78,7 @@ const updatePart = async (req, res) => {
         // find by primary key
         const part = await db.Parts.findByPk(req.params.id);
         await part.update(responseObj);
+
         res.json(responseObj);
     } catch (err) {
         console.error();

@@ -1,8 +1,12 @@
 import express from "express";
 const router = express.Router();
+import path from "path";
 import partsController from "../controllers/partsController.js";
 
-router.get("/", (req, res) => res.render("index")); // render index/forms page
+router.get("/", (req, res) => {
+    res.sendFile(path.resolve(process.cwd(), "views", "index.html"));
+});
+
 router.get("/api/parts", partsController.getParts); // get all parts
 router.get("/api/parts/:id", partsController.getPart); // get a single part
 router.post("/api/parts", partsController.createPart); // create a part
