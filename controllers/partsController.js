@@ -30,18 +30,11 @@ const getPart = async (req, res) => {
 
 const createPart = async (req, res) => {
     try {
-        // destructure req.body object
-        // const { partname, quantity, price, ...product } = req.body;
+        // (*) destructure req.body object 
         const { partType, quantity, price, ...product } = req.body;
         const productType = Object.keys(product)[0];
         const productValue = product[productType];
 
-        // const responseObj = {
-        //     partName: partname,
-        //     partType: productValue,
-        //     quantity,
-        //     price,
-        // };
         const responseObj = {
             partName: productValue,
             partType,
@@ -55,7 +48,6 @@ const createPart = async (req, res) => {
         res.json(responseObj);
     } catch (err) {
         console.error("Error: ", err.message || "Server Error");
-        // console.error();
         res.status(500).send("Internal Server Error");
     }
 };
