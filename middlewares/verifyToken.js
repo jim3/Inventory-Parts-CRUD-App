@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 dotenv.config();
 
+// Middleware to verify routes that require a token to access
 const verifyToken = (req, res, next) => {
     const authHeader = req.headers["authorization"];
     console.log(authHeader.split(" ")[1]); // splits the token from the header
