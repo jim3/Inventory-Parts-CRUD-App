@@ -1,4 +1,4 @@
-## RESTful API Inventory App for Fasteners :: ESM Edition
+## RESTful API Inventory App for Fasteners
 
 ### Description
 
