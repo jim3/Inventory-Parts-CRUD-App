@@ -86,17 +86,3 @@ the future are listed at the bottom of the README.
 ]
 ```
 
----
-
-
-
-
-// 20230509213930
-// http://localhost:3000/api/parts
-
-{
-  "partName": "nuts",
-  "partType": "lock",
-  "quantity": "60",
-  "price": ".60"
-}
