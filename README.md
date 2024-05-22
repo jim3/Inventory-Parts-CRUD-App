@@ -19,10 +19,6 @@ the future are listed at the bottom of the README.
 
 ---
 
-[Demo](https://jimmy3.xyz) expect → `502`'s
-
----
-
 ### API Endpoints for Parts
 
 | Method | Endpoint       | Description    |
@@ -59,7 +55,7 @@ the future are listed at the bottom of the README.
 
 #### Example of API call
 
-`${localhost}/api/parts` | `https://jimmy3.xyz/api/parts`
+`${localhost}/api/parts`
 
 #### Example of API response
 
