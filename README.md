@@ -2,7 +2,7 @@
 
 ### Description
 
-A CRUD app for parts, mainly just an exercise to learn more about creating web API's.
+A CRUD app for parts, a learning exercise to learn more about creating web API's.
 
 Express.js handles the routing and server-side logic. Sequelize ORM is used to interact with a SQLite3 database.
 The focus of the project is to learn more about how to build server-side. There is a front-end to simply demonstrate how the API works. Things I plan to implement in
